@@ -1,24 +1,24 @@
 .sidebar {
-    position: fixed;
-    top: 60px; /* Adjust for navbar height */
-    left: 0;
-    width: 200px;
-    height: calc(100% - 60px); /* Adjust for navbar height */
-    background-color: #444;
-    color: white;
-    padding-top: 1rem;
-    z-index: 100;
-    overflow-y: auto;
-  }
-  
-  .sidebar-link {
-    display: block;
-    padding: 0.75rem 1rem;
-    color: white;
-    text-decoration: none;
-  }
-  
-  .sidebar-link:hover {
-    background-color: #555;
-  }
-  
+  position: fixed;
+  top: 60px; /* Adjust for navbar height */
+  left: 0;
+  width: 200px;
+  height: calc(100% - 60px); /* Adjust for navbar height */
+  background-color:white;
+  color: white;
+  padding-top: 1rem;
+  z-index: 100;
+  overflow-y: auto;
+}
+
+.sidebar-link {
+  display: block;
+  padding: 0.75rem 1rem;
+  color:grey;
+  text-decoration: none;
+}
+
+.sidebar-link:hover {
+  background-color: #E0FFFF;
+  color:blue;
+}

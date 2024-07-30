@@ -1,8 +1,15 @@
+.main-content {
+  flex-grow: 1;
+  padding-left: 200px; /* Adjust for sidebar width */
+  padding-top: 60px; /* Adjust for navbar height */
+  padding-bottom: 60px; /* Adjust for footer height */
+  overflow: auto; /* Ensure scrolling */
+  background-color: #f4f4f4; /* Light grey background */
+}
+
+/* Optional: Adjust body background color if needed */
 body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  background-color: #eaeaea; /* Slightly darker grey for the body */
 }
 
 #root {
@@ -11,14 +18,14 @@ body {
   min-height: 100vh;
 }
 
-.main-content {
-  flex-grow: 1;
-  padding-left: 200px; /* Adjust for sidebar width */
-  padding-top: 60px; /* Adjust for navbar height */
-  padding-bottom: 60px; /* Adjust for footer height */
-}
+
 
 h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
+}
+
+/* Optional: Add background color for the white cards */
+.product-card {
+  background-color: #ffffff; /* White background for cards */
 }

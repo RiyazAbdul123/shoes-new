@@ -1,44 +1,120 @@
-@import './Container.css';
 .update-stock-container {
-    margin-left: 200px; /* Adjust for sidebar width */
-    padding: 1rem;
-    margin-top: 60px; /* Adjust for navbar height */
-    min-height: calc(100vh - 120px); /* Adjust for navbar and footer height */
-  }
-  
+  margin-left: 220px; /* Adjust for sidebar width */
+  padding: 1rem;
+  margin-top: 60px; /* Adjust for navbar height */
+  min-height: calc(100vh - 120px); /* Adjust for navbar and footer height */
+  box-sizing: border-box; /* Ensure padding and border are included in width/height */
+}
+
+.update-form {
+  max-width: 800px; /* Reduce the max-width of the form */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold; /* Make labels bold */
+  color: #333; /* Dark grey text */
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  max-width: 400px; /* Reduce the max-width of inputs and select */
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem; /* Ensure font size is consistent */
+  box-sizing: border-box; /* Include padding and border in element's total width/height */
+}
+
+.form-group textarea {
+  resize: vertical; /* Allow vertical resizing only */
+  min-height: 100px; /* Set a minimum height for textareas */
+}
+
+.submit-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem; /* Ensure button font size is consistent */
+  align-self: flex-start; /* Align button to the start of the form */
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Styles for side-by-side input alignment */
+.side-by-side {
+  display: flex;
+  gap: 1rem; /* Space between the inputs */
+}
+
+.side-by-side .form-group {
+  flex: 1; /* Allow inputs to grow and shrink equally */
+  margin-bottom: 0; /* Remove bottom margin for side-by-side groups */
+}
+
+.side-by-side .form-group label {
+  margin-bottom: 0.25rem; /* Reduce margin for side-by-side alignment */
+}
+
+.side-by-side .form-group input,
+.side-by-side .form-group textarea,
+.side-by-side .form-group select {
+  width: 100%; /* Ensure inputs take full width of their container */
+  max-width: 400px; /* Reduce the max-width of side-by-side inputs */
+}
+
+@media (max-width: 768px) {
   .update-form {
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stack inputs vertically on smaller screens */
   }
-  
-  .form-group {
-    margin-bottom: 1rem;
+
+  .side-by-side {
+    flex-direction: column; /* Stack inputs vertically on smaller screens */
+    gap: 0; /* Remove gap on smaller screens */
   }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
+
+  .side-by-side .form-group {
+    margin-bottom: 1rem; /* Add margin at the bottom for stacked inputs */
   }
-  
-  .form-group input, .form-group textarea {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .submit-button {
-    padding: 0.75rem 1.5rem;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .submit-button:hover {
-    background-color: #0056b3;
-  }
-  
+}
+.submit-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem; /* Ensure font size is consistent */
+  text-align: center; /* Center-align text */
+  min-width: 150px; /* Set a minimum width */
+  white-space: nowrap; /* Prevent text from wrapping */
+  align-self: flex-start; /* Align button to the start of the form */
+  transition: background-color 0.2s ease; /* Smooth transition for hover effect */
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.submit-button:disabled {
+  background-color: #ccc; /* Grey background for disabled state */
+  cursor: not-allowed; /* Change cursor to indicate disabled state */
+  color: #666; /* Darker grey text for disabled state */
+}

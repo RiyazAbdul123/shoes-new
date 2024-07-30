@@ -1,0 +1,64 @@
+/* Container styles */
+.services-container {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light grey background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    margin-left: 220px; /* Adjust for sidebar width */
+    margin-top: 60px; /* Adjust for navbar height */
+    min-height: calc(100vh - 120px); /* Adjust for navbar and footer height */
+    box-sizing: border-box; /* Ensure padding and border are included in width/height */
+  }
+  
+  /* Heading styles */
+  .services-container h1 {
+    font-size: 2.5rem;
+    color: #333; /* Dark grey text */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Paragraph styles */
+  .services-container p {
+    font-size: 1.2rem;
+    color: #666; /* Medium grey text */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* List styles */
+  .services-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  /* List item styles */
+  .services-container li {
+    font-size: 1rem;
+    color: #555; /* Darker grey text */
+    margin-bottom: 10px;
+  }
+  
+  /* List marker color */
+  .services-container li::marker {
+    color: #007bff; /* Blue color for list markers */
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .services-container {
+      margin: 10px;
+      padding: 15px;
+      margin-left: 0; /* Remove left margin on smaller screens */
+    }
+  
+    .services-container h1 {
+      font-size: 2rem;
+    }
+  
+    .services-container p,
+    .services-container li {
+      font-size: 1rem;
+    }
+  }
+  

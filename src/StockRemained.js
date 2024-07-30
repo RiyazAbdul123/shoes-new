@@ -95,11 +95,11 @@ const ProductCard = ({ product }) => {
       </div>
       <div className="product-details">
         <h2>{product.productName}</h2>
-        <p>ID: {product.productId}</p> {/* Display product ID */}
-        <p>Category: {product.productCategory}</p>
+        {/* <p>ID: {product.productId}</p>// Display product ID */}
+        {/* <p>Category: {product.productCategory}</p> */}
         <p>Price: ${product.productPrice}</p>
         <p>Quantity: {product.productQuantity}</p>
-        <p>{product.productDescription}</p>
+        {/* <p>{product.productDescription}</p> */}
       </div>
     </div>
   );
